@@ -1,0 +1,18 @@
+---
+# よく使うコマンドをインストールしておく
+- name: install basic command
+  sudo: yes
+  yum: 
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - git
+
+# 開発中は何かと邪魔になるのでfirewalldは止めておく
+- name: stop firewalld
+  sudo: yes
+  service: 
+    name: firewalld
+    enabled: no
+    state: stopped
+

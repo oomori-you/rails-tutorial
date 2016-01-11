@@ -1,0 +1,7 @@
+--
+- name: install rails
+  gem: 
+    name: rails
+    version: 4.2.2
+    state: present
+

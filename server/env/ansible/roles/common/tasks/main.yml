@@ -7,6 +7,9 @@
     state: present
   with_items:
     - git
+    - openssl-devel
+    - readline-devel
+    - zlib-devel
 
 # 開発中は何かと邪魔になるのでfirewalldは止めておく
 - name: stop firewalld

@@ -11,12 +11,18 @@
 
 - name: add path
   lineinfile:
-    dest: ~/.bash_profile
+    dest: ~/.bashrc
     line: 'export PATH="$HOME/.rbenv/bin:$PATH"'
     state: present
 - name: rbenv init
   lineinfile:
-    dest: ~/.bash_profile
+    dest: ~/.bashrc
     line: 'eval "$(rbenv init -)"'
     state: present
 
+- name: install ruby
+  shell:
+    rbenv install -v 2.3.0 -s
+- name: apply ruby
+  shell:
+    rbenv global 2.3.0

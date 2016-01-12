@@ -1,10 +1,9 @@
 ---
 - hosts: all
   sudo: no
-  tags:
-    - local
   roles:
     - { role: common, tags: ['common'] }
     - { role: ruby, tags: ['ruby'] }
     - { role: rails, tags: ['rails'] }
+    - { role: hello_app, tags: ['app'] }
 

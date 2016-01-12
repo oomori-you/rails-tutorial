@@ -1,0 +1,12 @@
+---
+- name: install depends module
+  sudo: yes
+  yum: 
+    name: sqlite-devel
+    state: present
+
+- name: bundle install
+  shell: ./bin/bundle install
+  args:
+    chdir: /var/www/workspace/hello_app/
+    

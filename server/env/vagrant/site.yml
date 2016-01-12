@@ -5,5 +5,5 @@
     - { role: common, tags: ['common'] }
     - { role: ruby, tags: ['ruby'] }
     - { role: rails, tags: ['rails'] }
-    - { role: hello_app, tags: ['app'] }
+    - { role: toy_app, tags: ['app'] }
 

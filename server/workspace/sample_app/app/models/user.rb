@@ -68,6 +68,11 @@ class User < ActiveRecord::Base
     reset_sent_at < 2.hours.ago
   end
 
+  # 施策feedの定義
+  def feed
+    Micropost.where("user_id = ?", id)
+  end
+
   private 
     # メールアドレスを全て小文字にする
     def downcase_email
